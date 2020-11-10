@@ -45,3 +45,19 @@ if( computerMove == 'kamień' && playerMove == 'papier'){
   } else( computerMove == 'nożyce' && playerMove == 'papier'){
       printMessage('Przegrywasz');
   }
+  
+  if( computerMove == 'kamień' && playerMove == 'kamień'){
+    printMessage('Remis');
+  } else if( computerMove == 'papier' && playerMove  == 'papier'){
+      printMessage('Remis');
+  } else( computerMove == 'nożyce' && playerMove == 'nożyce'){
+      printMessage('Remis');
+  }
+
+   if( computerMove == 'kamień' && playerMove == 'nieznany ruch'){
+       printMessage('Nieznany ruch!');
+   } else if( computerMove == 'papier' && playerMove == 'nieznany ruch'){
+       printMessage('Nieznany ruch!');
+   } else( computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
+       printMessage('Nieznany ruch!');
+   }
