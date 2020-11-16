@@ -22,12 +22,10 @@ let playerMove = 'nieznany ruch';
 
 if(playerInput == '1'){
   playerMove = 'kamień';
-} else if(playerImput == '2'){
+} else if (playerInput == '2') {
   playerMove = 'papier';
-} else if(playerInput == '3'){
+} else if (playerInput == '3') {
   playerMove = 'nożyce';
-} else {
-  printMessage('nieznany ruch');
 }
 
 printMessage('Twój ruch to: ' + playerMove);
@@ -39,6 +37,7 @@ if(computerMove == 'kamień' && playerMove == 'papier'){
   } else if(computerMove == 'nożyce' && playerMove == 'kamień'){
     printMessage('Ty wygrywasz');
   } 
+
 if(computerMove == 'kamień' && playerMove == 'nożyce'){
     printMessage('Przegrywasz');
   } else if(computerMove == 'papier' && playerMove == 'kamień'){
