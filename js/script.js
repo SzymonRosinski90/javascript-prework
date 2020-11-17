@@ -36,16 +36,17 @@ printMessage('Twój ruch to: ' + playerMove);
 
 function displayResult(argPlayerMove, argComputerMove){
   console.log("wywołano funkcję displayResults z argumentami: " + argPlayerMove + ", " + argComputerMove);
+  
   if (argPlayerMove == "papier" && argComputerMove == "kamień") {
-  printMessage("Wygrywasz!");
+  return("Wygrywasz!");
   } else if (argPlayerMove == "nożyce" && argComputerMove == "papier") {
-  printMessage("Wygrywasz!");
+  return("Wygrywasz!");
   } else if (argPlayerMove == "kamień" && argComputerMove == "nożyce") {
-  printMessage("Wygrywasz!");
+  return("Wygrywasz!");
   } else if (argPlayerMove == argComputerMove) {
-  printMessage("Remis!");
+  return("Remis!");
   } else {
-  printMessage("Przegrywasz :(");
+  return("Przegrywasz :(");
   }
   printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
-  };
+  }
