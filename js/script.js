@@ -47,6 +47,6 @@ function displayResult(argPlayerMove, argComputerMove){
   } else {
   printMessage("Przegrywasz :(");
   }
-  printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
-  }
+}
+
  displayResult(playerMove,computerMove)
