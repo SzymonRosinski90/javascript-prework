@@ -1,3 +1,8 @@
+/* functions */
+
+  playGame = function(playerInput) {
+    clearMessages();
+
 function getMoveName(argMoveId){
   if(argMoveId == 1){
     return 'kamień';
@@ -24,7 +29,7 @@ printMessage('Mój ruch to: ' + computerMove);
 
 /* player */
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+/*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.'); */
 
 console.log('Gracz wpisał: ' + playerInput);
 
@@ -48,5 +53,15 @@ function displayResult(argPlayerMove, argComputerMove){
   printMessage("Przegrywasz :(");
   }
 }
-
  displayResult(playerMove,computerMove)
+}
+
+document.getElementById('playRock').addEventListener('click', function(){
+  playGame(1);
+});
+document.getElementById('playPaper').addEventListener('click', function(){
+  playGame(2);
+});
+document.getElementById('playScissors').addEventListener('click', function(){
+  playGame(3);
+});
