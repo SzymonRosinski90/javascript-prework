@@ -1,7 +1,7 @@
 /* functions */
-
-  playGame = function(playerInput) {
-    clearMessages();
+{
+const playGame = function(playerInput) {
+  clearMessages();
 
 function getMoveName(argMoveId){
   if(argMoveId == 1){
@@ -39,7 +39,7 @@ printMessage('Twój ruch to: ' + playerMove);
 
 /* results */
 
-function displayResult(argPlayerMove, argComputerMove){
+const displayResult = function(argPlayerMove, argComputerMove){
   console.log("wywołano funkcję displayResults z argumentami: " + argPlayerMove + ", " + argComputerMove);
   if (argPlayerMove == "papier" && argComputerMove == "kamień"){
   printMessage("Wygrywasz!");
@@ -65,3 +65,4 @@ document.getElementById('playPaper').addEventListener('click', function(){
 document.getElementById('playScissors').addEventListener('click', function(){
   playGame(3);
 });
+}
