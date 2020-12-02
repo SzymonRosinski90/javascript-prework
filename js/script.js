@@ -3,6 +3,7 @@
   const stone = 'kamień'; 
   const paper = 'papier';
   const sscissors = 'nozyce';
+  
   const playGame = function(playerInput){
     clearMessages();
 
@@ -41,11 +42,11 @@
     /* results */
     const displayResult = function (argPlayerMove, argComputerMove) {
       console.log("wywołano funkcję displayResults z argumentami: " + argPlayerMove + ", " + argComputerMove);
-      if (argPlayerMove == "papier" && argComputerMove == "kamień") {
+      if (argPlayerMove == paper && argComputerMove == stone) {
         printMessage("Wygrywasz!");
-      } else if (argPlayerMove == "nożyce" && argComputerMove == "papier") {
+      } else if (argPlayerMove == sscissors && argComputerMove == paper) {
         printMessage("Wygrywasz!");
-      } else if (argPlayerMove == "kamień" && argComputerMove == "nożyce") {
+      } else if (argPlayerMove == stone && argComputerMove == sscissors) {
         printMessage("Wygrywasz!");
       } else if (argPlayerMove == argComputerMove) {
         printMessage("Remis!");
@@ -55,14 +56,13 @@
     };
     displayResult(playerMove, computerMove);
   }
-
-document.getElementById('playRock').addEventListener('click', function(){
-  playGame(1);
-});
-document.getElementById('playPaper').addEventListener('click', function(){
-  playGame(2);
-});
-document.getElementById('playScissors').addEventListener('click', function(){
-  playGame(3);
-});
+  document.getElementById('playRock').addEventListener('click', function(){
+    playGame(1);
+  });
+  document.getElementById('playPaper').addEventListener('click', function(){
+    playGame(2);
+  });
+  document.getElementById('playScissors').addEventListener('click', function(){
+    playGame(3);
+  });
 }
